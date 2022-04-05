@@ -5,7 +5,6 @@ h3s = document.querySelectorAll("h3")
 
 hideContent()
 
-
 h2s.forEach((h2) => {
     h2.addEventListener("click", () => {  
         if (h2.nextElementSibling.classList.contains("do-not-display")) {
