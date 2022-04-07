@@ -136,7 +136,7 @@
         <div class="content-section">
 
             <div class="content-title">
-                <h3 >What Is A Virtual Machine (Basic Introduction)</h3>
+                <h3 >What Is A Virtual Machine</h3>
                 <div class="content-details">
                     <p class="bold">NFTs Under The Hood</p> 
                     <ul>
@@ -163,17 +163,34 @@
 
 
             <div class="content-title">
-                <h3 class="empty">Optional - Advanced - Introduction to Opcodes for the EVM</h3>
+                <h3>Introduction to Opcodes for the EVM</h3>
                 <div class="content-details">
-                            
+                     <p class="bold">Smart Contracts</p>  
+                     <ul>
+                         <li>Smart contract languages like Solidity cannot be executed by EVM directly</li>
+                         <li>Instead, they are compiled to low-level machine instructions (called <u>opcodes</u></li>
+                         <li>If you go to <a href="https://www.ethervm.io">EtherVM</a> you can read up on all the Virtual Machine opcodes</li>
+                         
+                     </ul>     
+                     <p class="bold">Opcodes</p>
+                     <ul>
+                        <li>Smart Contracts are just like regular accounts, except they run EVM bytecode when receiving a transaction, allowing them to perform calculations and further transactions</li>
+                        <li>Each opcode is encoded as one byte, except for the <u>PUSH</u> opcodes, which take a immediate value</li>
+                     </ul>
+                     <p class="bold">Storage</p>
+                     <ul>
+                         <li>Storage is a persistent associative map, with <u>uint256</u>s as keys and <u>uint256</u>s as values</li>
+                         <li>All contract fields and mappings are saved in storage</li>
+                         <li>Storage fields can be inspected using <u>web3.eth.getStorageAt(addtess, key)</u></li>
+                     </ul>
                 </div>
            </div>
 
 
            <div class="content-title">
-            <h3 class="empty">How Contract Storage Works With Ethereum Smart Contracts</h3>
+            <h3>How Contract Storage Works With Ethereum Smart Contracts</h3>
                 <div class="content-details">
-                        
+                    <p class="bold"></p>
                 </div>
             </div>
 
