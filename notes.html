@@ -9,8 +9,9 @@
 </head>
 <body>
     <h1 class = "title">The Complete NFT Web Development Course</h1>
+    
     <section>
-       <h2>What Is An NFT (A Cultural Introduction)</h2> 
+       <h2>What Is An NFT?</h2> 
        <div class="content-section">
 
            <div class="content-title">
@@ -131,53 +132,105 @@
     </section>
      
     <section>
-        <h2>The Ethereum Virtual Machine - EVM (NFT Technology Under The Hood)</h2> 
+        <h2>The Ethereum Virtual Machine - EVM</h2> 
         <div class="content-section">
 
             <div class="content-title">
-                <h3 >What Is A Virtual Machine (Basic Introduction)</h3>
+                <h3 >What Is A Virtual Machine</h3>
                 <div class="content-details">
-                            
+                    <p class="bold">NFTs Under The Hood</p> 
+                    <ul>
+                        <li>In order to develop NFT Smart Contracts we compile down to a Virtual Machine which acts as a layer of abstraction</li>
+                        <li>Virtual Machines are essentially creating a level of abstraction between the executing code and the executing machine</li>
+                        <li>This layer is needed to improve the portability of software, as well as to make sure applications seperated from each other, and seperated from their host.</li>
+                    </ul>       
                 </div>
            </div>
 
 
            <div class="content-title">
-            <h3 >What Are Smart Contracts - Ethereum & Solidity</h3>
+            <h3>What Are Smart Contracts - Ethereum & Solidity</h3>
                 <div class="content-details">
-                        
+                       <p class="bold">Smart Contracts</p> 
+                       <ul>
+                           <li>Smart Contracts are written in programming language, called <u>solidity</u></li>
+                           <li>Solidity is a language similar to <u>Javascript</u> and <u>C++</u></li>
+                           <li>There are other languages for writing smart contracts like <u>Vyper</u> and <u>Bamboo</u></li>
+                           <li>Before Solidity was released, other languages like <u>Serpent</u> (deprecated) and <u>Mutan</u> (deprecated) were user</li>
+                       </ul>
                 </div>
             </div>
 
 
             <div class="content-title">
-                <h3 >Optional - Advanced - Introduction to Opcodes for the EVM</h3>
+                <h3>Introduction to Opcodes for the EVM</h3>
                 <div class="content-details">
-                            
+                     <p class="bold">Smart Contracts</p>  
+                     <ul>
+                         <li>Smart contract languages like Solidity cannot be executed by EVM directly</li>
+                         <li>Instead, they are compiled to low-level machine instructions (called <u>opcodes</u></li>
+                         <li>If you go to <a href="https://www.ethervm.io">EtherVM</a> you can read up on all the Virtual Machine opcodes</li>
+                         
+                     </ul>     
+                     <p class="bold">Opcodes</p>
+                     <ul>
+                        <li>Smart Contracts are just like regular accounts, except they run EVM bytecode when receiving a transaction, allowing them to perform calculations and further transactions</li>
+                        <li>Each opcode is encoded as one byte, except for the <u>PUSH</u> opcodes, which take a immediate value</li>
+                     </ul>
+                     <p class="bold">Storage</p>
+                     <ul>
+                         <li>Storage is a persistent associative map, with <u>uint256</u>s as keys and <u>uint256</u>s as values</li>
+                         <li>All contract fields and mappings are saved in storage</li>
+                         <li>Storage fields can be inspected using <u>web3.eth.getStorageAt(addtess, key)</u></li>
+                     </ul>
                 </div>
            </div>
 
 
            <div class="content-title">
-            <h3 >How Contract Storage Works With Ethereum Smart Contracts</h3>
+            <h3>How Contract Storage Works With Ethereum Smart Contracts</h3>
                 <div class="content-details">
-                        
+                    <p class="bold">High Level vs Low Level Languages</p>
+                    <ul>
+                        <li>Lower-level programming languages often use a <u>stack</u> to pass values to functions</li>
+                        <li>The EVM uses a <u>256-bit register stack</u> from which the most recent 16 items can be accessed or manipulated at once.</li>
+                        <li>In total, the stack can only hold <u>1024</u> items</li>
+                    </ul>
+                    <p class="bold">Byte codes</p>
+                    <ul>
+                        <li>Because of these limitations, complicated opcodes instead use <u>contract memory</u> to retrieve or pass data</li>
+                        <li>Contract storage essentially acts as a public database, from which values can be read externally without having to send a transaction to contract (no fees!)</li>
+                        <li>However, writing to storage is very expensive (as much as 6000x) to writing in memory</li>
+                    </ul>
                 </div>
             </div>
 
 
             <div class="content-title">
-                <h3 >Optional - Advances - Allow the EVM to Compute Almost Anything</h3>
+                <h3>Allow the EVM to Compute Almost Anything</h3>
                 <div class="content-details">
-                            
+                    <p class="bold">Smart Contracts</p>        
+                    <ul>
+                        <li>Under the hood, EVM uses a set of instructions (called <u>opcodes</u>) to execute specific tasks</li>
+                        <li>There are over 100 opcodes. This means the EVM is able to compute (almost) anything, given enough resources</li>
+                        <li>Because opcodes are one byte, there can only be a maximum of 256 opcodes</li>
+                        
+                    </ul>
                 </div>
            </div>
 
 
            <div class="content-title">
-            <h3 >Review - What is the EVM?</h3>
+            <h3>Review - What is the EVM?</h3>
             <div class="content-details">
-                        
+                <p class="bold">Conclusion</p>   
+                <ul>
+                    <li>Smart contract languages, like <u>solidity</u> cannot be executed by EVM directly. Instead, they are compiled to low-level machine instructions, called <u>opcodes</u></li>
+                    <li>Smart Contracts interact with the EVM which is more expensive than running programs on traditional servers, however provide more decentralised approach for developing Applications</li>
+                    <li>In order to develop NFT Smart Contracts we compile down to a Virtual Machine which acts as a layer of abstraction</li>
+                    <li>Virtual Machines are essentially creating a level of abstraction between the executing code and the executing machine</li>
+                    <li>This layer is needed to improve the portability of software, as well as to make sure applications seperated from each other, and seperated from their host.</li>
+                </ul>     
             </div>
        </div>
 
@@ -185,15 +238,58 @@
      </section>
 
      <section>
-        <h2>What Is An NFT Marketplace (Introduction)</h2> 
+        <h2>What Is An NFT Marketplace</h2> 
         <div class="content-section">
 
             <div class="content-title">
-                <h3 >Sample</h3>
+                <h3 class="empty">What is An NFT Marketplace</h3>
                 <div class="content-details">
                             
                 </div>
            </div>
+
+            <div class="content-title">
+                <h3 class="empty">Introduction To Our KryptoBirdz Marketplace Concept</h3>
+                <div class="content-details">
+                        
+                </div>
+            </div>
+
+
+            <div class="content-title">
+                <h3 class="empty">What Is OpenSea</h3>
+                <div class="content-details">
+                        
+                </div>
+            </div>
+
+            <div class="content-title">
+                <h3 class="empty">What is an NFT Collections & Collectibles </h3>
+                <div class="content-details">
+                        
+                </div>
+            </div>
+
+            <div class="content-title">
+                <h3 class="empty">Excercise - Practice With A NFT Marketplace</h3>
+                <div class="content-details">
+                        
+                </div>
+            </div>
+
+            <div class="content-title">
+                <h3 class="empty">What is Algorithmically Generated NFT Art</h3>
+                <div class="content-details">
+                        
+                </div>
+            </div>
+
+            <div class="content-title">
+                <h3 class="empty">Review of NFTs & Next Steps</h3>
+                <div class="content-details">
+                        
+                </div>
+            </div>
      
         </div>
      </section>
