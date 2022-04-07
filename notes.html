@@ -190,15 +190,26 @@
            <div class="content-title">
             <h3>How Contract Storage Works With Ethereum Smart Contracts</h3>
                 <div class="content-details">
-                    <p class="bold"></p>
+                    <p class="bold">High Level vs Low Level Languages</p>
+                    <ul>
+                        <li>Lower-level programming languages often use a <u>stack</u> to pass values to functions</li>
+                        <li>The EVM uses a <u>256-bit register stack</u> from which the most recent 16 items can be accessed or manipulated at once.</li>
+                        <li>In total, the stack can only hold <u>1024</u> items</li>
+                    </ul>
+                    <p class="bold">Byte codes</p>
+                    <ul>
+                        <li>Because of these limitations, complicated opcodes instead use <u>contract memory</u> to retrieve or pass data</li>
+                        <li>Contract storage essentially acts as a public database, from which values can be read externally without having to send a transaction to contract (no fees!)</li>
+                        <li>However, writing to storage is very expensive (as much as 6000x) to writing in memory</li>
+                    </ul>
                 </div>
             </div>
 
 
             <div class="content-title">
-                <h3 class="empty">Optional - Advances - Allow the EVM to Compute Almost Anything</h3>
+                <h3>Allow the EVM to Compute Almost Anything</h3>
                 <div class="content-details">
-                            
+                    <p class="bold"></p>        
                 </div>
            </div>
 
