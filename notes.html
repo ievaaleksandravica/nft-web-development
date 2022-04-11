@@ -341,52 +341,200 @@
         <div class="content-section">
 
             <div class="content-title">
-                <h3 class="empty">Standardization of NFT Smart Contracts</h3>
-                <div class="content-details"></div>
+                <h3>Standardization of NFT Smart Contracts</h3>
+                <div class="content-details">
+                    <p class="bold">Understand ERC721 tokens</p>
+                    <ul>
+                        <li>building the standard version</li>
+                        <li>without any libraries</li>
+                    </ul>
+                    <p class="bold">Agenda</p>
+                    <ul>
+                        <li>what is the ERC721</li>
+                        <li>what is the ERC20</li>
+                        <li>crypto tokens versus non-fungible</li>
+                        <li>fungible versus non-fungible</li>
+                    </ul>
+                </div>
             </div>
 
             <div class="content-title">
-                <h3 class="empty">NFT and Gaming Introduction</h3>
-                <div class="content-details"></div>
+                <h3>NFT and Gaming Introduction</h3>
+                <div class="content-details">
+                    <p class="bold">What is the ERC721 Standard (CryptoKitties Example)</p>
+                    <ul>
+                        <li>in 2017, the game <u>Cryptokitties</u> demonstrated how non-fungible assets can be made and traded on the Ethereum blockchain</li>
+                        <li>in this game, players can breed and trade Kitties - but crucially, all the Kitties exist on the blockchain, and can only be bred or traded by the player who owns them</li>
+                    </ul>
+                    <p class="bold">Comparison to traditional online game</p>
+                    <ul>
+                        <li>a traditional online game stored data on a central server and game admins are able to make changes as they see fit</li>
+                        <li>in Cryptokitties, players buy and sell their kitties on a secentralized and trust-less network, with ownership of their Kitties being irrefutable provable</li>
+                    </ul>
+
+                </div>
             </div>
 
             <div class="content-title">
-                <h3 class="empty">What Real Problems Do Non Fungible Tokens Actually Solve</h3>
-                <div class="content-details"></div>
-            </div>
+                <h3>What Real Problems Do Non Fungible Tokens Actually Solve</h3>
+                <div class="content-details">
+                    <p class="bold">Real life scenarios</p>
+                    <ul>
+                        <li>what if we replaced pretend kitties with the deed to a house, a key to unlock valuables - you could technically sell tokens to someone else, and ownership of the token and payment (in ETH) could be exchanged without the need for any expensive lawyers or other middlemen</li>
+                    </ul>
+                    
 
-
-            <div class="content-title">
-                <h3 class="empty">Defining an ERC721 Token</h3>
-                <div class="content-details"></div>
-            </div>
-
-            <div class="content-title">
-                <h3 class="empty">ERC721 By Example (BalanceOf Function)</h3>
-                <div class="content-details"></div>
+                </div>
             </div>
 
             <div class="content-title">
-                <h3 class="empty">EIP - The Ethereum Improvement Proposal</h3>
-                <div class="content-details"></div>
+                <h3>Defining an ERC721 Token</h3>
+                <div class="content-details">
+                    <p class="bold">Definition</p>
+                    <ul>
+                        <li>An ERC standard is basically a set of rules which enables your contract play to well with other developers' contracts (or Marketplaces, DApps, other software, etc).</li>
+                        <li>It provides a guideline to adhere so that the contracts work in accordance to a set of standards allowing for better communication between contracts.</li>
+                        <li>Other programmers can write code that interacts with yours without habing to know your entire codebase</li>
+                    </ul>
+                    <p class="bold">Difference between ERC721 and ERC20</p>
+                    <ul>
+                        <li><u>ERC721</u> is the number we will associate with NFTs</li>
+                        <li><u>ERC20</u> is for cryptocurrencies</li>
+                        <li>the difference between those two tokens is that <u>ERC 20</u> is fungible and <u>ERC721</u> are the non fungible</li>
+                    </ul>
+                </div>
             </div>
 
             <div class="content-title">
-                <h3 class="empty">What is the ERC721 Token Contract</h3>
-                <div class="content-details"></div>
+                <h3>ERC721 By Example (BalanceOf Function)</h3>
+                <div class="content-details">
+                    <p class="bold">Example from the code that we will build together</p>
+                    <ul>
+                        <li><u>function balanceOf(address _owner) public override view returns(uint256) {}</u></li>
+                        <li>every function has a signature - an input and all the modifications and information that goes until the function script begins</li>
+                        <li>the signature itself is a standard of <u>ERC721</u></li>
+                        <li>in order to right smart contracts, our contracts must have the <u>balanceOf</u> function</li>
+                        <li>what the function actually returns is entirely up to us</li>
+                        <li>its important that our smart contracts have all the functions that are required in <u>ERC721</u></li>
+                    </ul>
+                </div>
             </div>
 
             <div class="content-title">
-                <h3 class="empty">Exercise - meet a Web3 Community and Ask a Question</h3>
-                <div class="content-details"></div>
+                <h3>EIP - The Ethereum Improvement Proposal</h3>
+                <div class="content-details">
+                    <p class="bold">EIP-721</p>
+                    <ul>
+                        <li>EIP-721: Non-Fungible Token Standard</li>
+                        <li>It is a document, that declares the Abstract, Motivation and Specification of how to build NFT marketplace to the standard of non-fungible tokens</li>
+                        <li>it has a roadmap to refer to</li>
+                        <li><u>interface ERC721</u> is a solidity interface which contains all of the requirements that we must have to build our <u>ERC721</u></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-title">
+                <h3>What is the ERC721 Token Contract</h3>
+                <div class="content-details">
+                    <p class="bold">Conclusion</p>
+                    <ul>
+                        <li>An ERC standard is basically a set of rules which enables your contract play to well with other developers' contracts (or Marketplaces, DApps, other software, etc).
+                        </li>
+                        <li>It provides a guideline to adhere so that the contracts work in accordance to a set of standards allowing for better communication between contracts.
+                        </li>
+                        <li>Other programmers can write code that interacts with yours without habing to know your entire codebase
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-title">
+                <h3>Telegram community</h3>
+                <div class="content-details">
+                    <p class="bold">Web3</p>
+                    <ul>
+                        <li>Web3, in the context of technology, refers to decentralized apps that run on the blockchain. These are apps that allow anyone to participate without monetizing their personal data.</li>
+                        <li>Many of the communities surrounding Web3 based projects can be found either on Telegram or Discord which we are already familiar with :) </li>
+                    </ul>
+                    <p class="bold">Telegram</p>
+                    <ul>
+                        <li>In this exercise you should familiarize yourself with Telegram (completely free to use like Discord) and engage with a Web3 based Telegram community called Tamago.</li>
+                        <li>Where Discord excels at organizational workflow for communities Telegram takes advantages in its simplicity and fun free flow for conversation and updates from platforms and community connectivity.</li>
+                    </ul>
+                    <p class="bold">Tamago</p>
+                    <ul>
+                        <li>Tamago is the NEAR Blockchain partnered decentralized music platform seamlessly integrating Web3 and NFT technology which I've had the pleasure to spearhead. You can check it out at <a href="https://tamastream.io">Tamastram</a>. The platform is powered by a baked in streaming model that opens up direct and transparent revenue streams back to the artists while reducing redundant intermediaries.</li>
+                        <li>1. Go to: <a href="https://t.me/tamago_official">Telegram Channel</a> and joint the group!</li>
+                        <li>2. Ask a question related to NFTs and decentralization with the project and engage a live and growing Web3 community backed by one of the top 20 crypto currencies.  </li>
+                        <li>Bonus: Try out Tamago a Web3 platform that's completely free to use and listen to some music :) <a href="https://tamastream.io">Tamastream</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
      </section>
 
      <section>
-        <h2>Optional - Crash Course Solidity</h2> 
+        <h2>Crash Course Solidity I</h2> 
         <div class="content-section">
 
+            <div class="content-title">
+                <h3 class="empty">Overview - Getting Started With Programming</h3>
+                <div class="content-details">
+                    <p class="bold"></p>
+                </div>
+
+                <h3 class="empty">Important Note</h3>
+                <div class="content-details">
+                    <p class="bold"></p>
+                </div>
+
+                <h3 class="empty">How to code along in these sections - Remix Ethereum IDE Introduction</h3>
+                <div class="content-details">
+                    <p class="bold"></p>
+                </div>
+
+                <h3 class="empty">Quick note on the upcoming crash course section</h3>
+                <div class="content-details">
+                    <p class="bold"></p>
+                </div>
+
+                <h3 class="empty">What is Solidity (as coding language)</h3>
+                <div class="content-details">
+                    <p class="bold"></p>
+                </div>
+
+                <h3 class="empty">Pragma Solidity (how to select compiler versions)</h3>
+                <div class="content-details">
+                    <p class="bold"></p>
+                </div>
+
+                <h3 class="empty">Creating Smart Contracts in Solidity</h3>
+                <div class="content-details">
+                    <p class="bold"></p>
+                </div>
+
+                <h3 class="empty">What are Variables & Datatypes in Solididty</h3>
+                <div class="content-details">
+                    <p class="bold"></p>
+                </div>
+
+                <h3 class="empty">Deploying your very first Smart Contract Token</h3>
+                <div class="content-details">
+                    <p class="bold"></p>
+                </div>
+
+                <h3 class="empty">Visibility keywords in Solidity</h3>
+                <div class="content-details">
+                    <p class="bold"></p>
+                </div>
+
+                <h3 class="empty">Excercise - Solidity Visibility Challenge</h3>
+                <div class="content-details">
+                    <p class="bold"></p>
+                </div>
+            </div>
+
+            
 
         </div>
      </section>
