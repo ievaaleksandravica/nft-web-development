@@ -6,3 +6,5 @@ pragma solidity ^0.8.4;
 contract Token {
     // all the code to write smart contracts go in here
 }
+
+contract LearningSolidity {}
