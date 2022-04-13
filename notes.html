@@ -589,27 +589,90 @@
                     </ul>
                 </div>
 
-                <h3>What are Variables & Datatypes in Solididty</h3>
+                <h3>What are Variables & Datatypes in Solidity</h3>
                 <div class="content-details">
-                    <p class="bold"></p>
+                    <p class="bold">Building functionality for Crypto Token</p>
                     <ul>
-                        <li></li>
+                        <li>we want our CryptoToken to mint tokens</li>
+                        <li>we want a datatype for storing integers (tokens)</li>
+                    </ul>
+                    <p class="bold">Data types</p>
+                    <ul>
+                        <li>in programming we have datatypes to store and change data</li>
+                        <li>we can create them by explicitily declaring them in Solidity</li>
+                        <li>whenever you write any expression in solidity, you have to use a semicolon <u>;</u> to close the expression</li>
+                    </ul>
+                    <p class="bold">Storing information in code</p>
+                    <ul>
+                        <li>variables associated with their types</li>
+                        <li>we can use the <u>uint</u> (unassigned integer) variable to store integers </li>
+                        <li><u>uint public tokens;</u> - here we declare an integer, make it public (visible) and call it tokens</li>
+                        <li>as you declared it as integer, now you can set it as whatever you want e.g. <u>uint public tokens = 400;</u></li>
                     </ul>
                 </div>
 
-                <h3 class="empty">Deploying your very first Smart Contract Token</h3>
+                <h3>Deploying your very first Smart Contract Token</h3>
                 <div class="content-details">
-                    <p class="bold"></p>
+                    <p class="bold">Compiling the contract</p>
+                    <ul>
+                        <li><u>cmd+s</u> in Mac, will automatically save and compile your contract</li>
+                        <li>you will immediately get a warning in the <u>compiler</u> tab</li>
+                        <li>in this case, the warning is asking for a license, which we don't need, so we can ignore it</li>
+                        <li>other way to compile would be to click on the <u>compiler</u> tab and click <u>compile contract.sol</u></li>
+                    </ul>
+                    <p class="bold">Deploying the contract</p>
+                    <ul>
+                        <li>now in the <u>contract</u> tab you should see your contract to be available now</li>
+                        <li>once deployed, you will see the contract in the <u>Deployed Contracts</u> section</li>
+                        <li>you will also see that it is deployed in the <u>console</u>. You can click the <u>debug</u> button to get more details, like the gas</li>
+                        <li>you can expand the contract to see more details</li>
+                    </ul>
+                    <p class="bold">Deployed contract details</p>
+                    <ul>
+                        <li>you will see a button <u>tokens</u></li>
+                        <li>the button represents the <u>400</u> tokens</li>
+                        <li>the IDE allows to interact and see the smart contracts live</li>
+                        <li>if you click on the <u>tokens</u> button, you will see <u>uint256: 400</u></li>
+                    </ul>
                 </div>
 
-                <h3 class="empty">Visibility keywords in Solidity</h3>
+                <h3>Visibility keywords in Solidity</h3>
                 <div class="content-details">
-                    <p class="bold"></p>
+                    <p class="bold">Declaring the addresses</p>
+                    <ul>
+                        <li>we only want the msg.sender (the current caller) to be able to mint tokens</li>
+                        <li><u>address public minter;</u></li>
+                    </ul>
+                    <p class="bold">Public vs private</p>
+                    <ul>
+                        <li>have the tokens set to <u>private</u></li>
+                        <li>have the address set to <u>public</u></li>
+                        <li>deploy the contract</li>
+                        <li>in the details of the contract, only <u>minter</u> will be visible</li>
+                        <li>visibility for <u>tokens</u> are not visible outside the contract</li>
+                    </ul>
+                    <p class="bold">Different keywords</p>
+                    <ul>
+                        <li><u>public</u> visible outside the contract</li>
+                        <li><u>private</u> visible only within the contract</li>
+                        <li><u>external</u> not allowed for datatypes</li>
+                        <li><u>internal</u> token can only visible internally</li>
+                    </ul>
                 </div>
 
-                <h3 class="empty">Excercise - Solidity Visibility Challenge</h3>
+                <h3>Excercise - Solidity Visibility Challenge</h3>
                 <div class="content-details">
-                    <p class="bold"></p>
+                    <p class="bold">Description</p>
+                    <ul>
+                        <li>create a var integer called <u>totalSupply</u> and set it o 7</li>
+                        <li><u>totalSupply should not be accessible outside of the smart contract</u></li>
+                        <li>create a var address <u>sender</u> and set it so that it is publically accessible </li>
+                    </ul>
+                    <p class="bold">Solution</p>
+                    <ul>
+                        <li><u>uint256 private totalSupply = 7</u></li>
+                        <li><u>address public sender</u></li>
+                    </ul>
                 </div>
             </div>
 
@@ -619,12 +682,100 @@
      </section>
 
      <section>
-        <h2>Optional - Extra Solidity Practice for Begginners & Glossary</h2> 
-        <div class="content-section">
+        <h2>Crash Course Solidity ||</h2> 
+        <div class="content-title">
+                <div class="content-section">
 
-       
+                    <h3>Important note</h3>
+                    <div class="content-details">
+                        <p class="bold">Important Note</p>
+                        <ul>
+                            <li>1 If you have no experience in Solidity or Programming then I encourage you to go through these sections before proceeding to our project development</li>
+                            <li>2 If you have some experience in Solidity and Web Development then feel free to either skip this section for now and use it as a reference in case later on we go through topics in the course which you need more context and explanations for (all the topics covered in the following sections are used throughout the back end part of this course</li>
+                            <li>3 If you have already taken The Complete Solidity Course Zero To Expert or already have experience coding in Solidity then skip on ahead to our project set up!</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="empty">what is a Contructor in Solidity</h3>
+                    <div class="content-details">
+              
+                    </div>
+
+                    <h3 class="empty">What is mapping in Solidity</h3>
+                    <div class="content-details">
+                        <p class="bold"></p>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div>
+
+                    <h3 class="empty">Exercise - Write a Mapping</h3>
+                    <div class="content-details">
+                        <p class="bold"></p>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div>
+
+
+                    <h3 class="empty">What are Events in Solidity</h3>
+                    <div class="content-details">
+                        <p class="bold"></p>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div>
+
+                    <h3 class="empty">The Mint Token Function Signature</h3>
+                    <div class="content-details">
+                        <p class="bold"></p>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div>
+
+                    <h3 class="empty">Conditional Logic and Error Handling in Solidity</h3>
+                    <div class="content-details">
+                        <p class="bold"></p>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div>
+
+                    <h3 class="empty">Updating Token Balances and the +=Operator</h3>
+                    <div class="content-details">
+                        <p class="bold"></p>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div>
+
+                    <h3 class="empty">Excercise - Write a Send Token Function</h3>
+                    <div class="content-details">
+                        <p class="bold"></p>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div>       
+                    
+                    <h3 class="empty">Deploy Your First Mintable Token Contract</h3>
+                    <div class="content-details">
+                        <p class="bold"></p>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
         </div>
      </section>
+
+     <section>
+        <h2>Extra Solidity Practice and Glossary</h2> 
+        <div class="content-section">
+
+        </div>
+     </section>
+
 
      <section>
         <h2>How To Set Up A Development Environment for NFTs</h2> 
