@@ -4,6 +4,9 @@ pragma solidity ^0.8.4;
 
 // in Solidity everyhing is explicitly declared
 contract Token {
-    uint256 public tokens = 400;
+    uint256 private tokens = 400;
     address public minter;
+
+    uint256 private totalSupply = 7;
+    address public sender;
 }
