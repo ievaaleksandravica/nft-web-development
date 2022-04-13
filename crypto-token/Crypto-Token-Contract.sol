@@ -4,7 +4,5 @@ pragma solidity ^0.8.4;
 
 // in Solidity everyhing is explicitly declared
 contract Token {
-    // all the code to write smart contracts go in here
+    uint256 public tokens = 400;
 }
-
-contract LearningSolidity {}
