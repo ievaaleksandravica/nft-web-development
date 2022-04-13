@@ -636,10 +636,28 @@
                     </ul>
                 </div>
 
-                <h3 class="empty">Visibility keywords in Solidity</h3>
+                <h3>Visibility keywords in Solidity</h3>
                 <div class="content-details">
-                    <p class="bold"></p>
-                    <ul></ul>
+                    <p class="bold">Declaring the addresses</p>
+                    <ul>
+                        <li>we only want the msg.sender (the current caller) to be able to mint tokens</li>
+                        <li><u>address public minter;</u></li>
+                    </ul>
+                    <p class="bold">Public vs private</p>
+                    <ul>
+                        <li>have the tokens set to <u>private</u></li>
+                        <li>have the address set to <u>public</u></li>
+                        <li>deploy the contract</li>
+                        <li>in the details of the contract, only <u>minter</u> will be visible</li>
+                        <li>visibility for <u>tokens</u> are not visible outside the contract</li>
+                    </ul>
+                    <p class="bold">Different keywords</p>
+                    <ul>
+                        <li><u>public</u> visible outside the contract</li>
+                        <li><u>private</u> visible only within the contract</li>
+                        <li><u>external</u> not allowed for datatypes</li>
+                        <li><u>internal</u> token can only visible internally</li>
+                    </ul>
                 </div>
 
                 <h3 class="empty">Excercise - Solidity Visibility Challenge</h3>

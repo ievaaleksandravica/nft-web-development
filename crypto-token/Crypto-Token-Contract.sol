@@ -5,4 +5,5 @@ pragma solidity ^0.8.4;
 // in Solidity everyhing is explicitly declared
 contract Token {
     uint256 public tokens = 400;
+    address public minter;
 }
