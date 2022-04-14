@@ -7,5 +7,7 @@ contract Token {
     uint256 private tokens = 400;
     address public minter;
 
-    constructor() {}
+    constructor() {
+        minter = msg.sender;
+    }
 }

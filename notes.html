@@ -711,6 +711,13 @@
                         <p class="bold">Constructor for our contract</p>
                         <ul>
                             <li>we want the <u>minter</u> address to be set immediately when we call the contract to the person calling the contract</li>
+                            <li>we can set the <u>minter</u> variable in the <u>constructor</u> to the current caller</li>
+                            <li><u>minter = msg.sender</u></li>
+                        </ul>
+                        <p class="bold">msg.sender</p>
+                        <ul>
+                            <li>global variable that is built in Solidity</li>
+                            <li>it allows us to set an address to the person calling the contract</li>
                         </ul>
                     </div>
 
