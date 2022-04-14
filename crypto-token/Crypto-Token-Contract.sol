@@ -12,4 +12,6 @@ contract Token {
     }
 
     mapping(address => uint256) public balances;
+
+    event Sent(address from, address to, uint256 amount);
 }

@@ -758,6 +758,20 @@
                             <li>events only work one way</li>
                             <li>when you run contract transactions, events log the transaction information</li>
                         </ul>
+                        <p class="bold">Types of events</p>
+                        <ul>
+                            <li>sent</li>
+                            <li>transfer</li>
+                            <li>allow</li>
+                        </ul>
+                        <p class="bold">Writing an event</p>
+                        <ul>
+                            <li>events take two steps: setting it up and emitting the event</li>
+                            <li>events come with preconditioned arguments we should pass</li>
+                            <li>arguments are inputs that allow our functions to be dynamic </li>
+                            <li><u>event Sent(from, to, amount)</u></li>
+                            <li><u>event Sent(address from, address to , uint256 amount)</u></li>
+                        </ul>
                     </div>
 
                     <h3 class="empty">The Mint Token Function Signature</h3>
