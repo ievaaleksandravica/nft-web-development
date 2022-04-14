@@ -7,6 +7,5 @@ contract Token {
     uint256 private tokens = 400;
     address public minter;
 
-    uint256 private totalSupply = 7;
-    address public sender;
+    constructor() {}
 }
