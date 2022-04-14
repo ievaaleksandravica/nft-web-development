@@ -7,6 +7,11 @@ contract Token {
     uint256 private tokens = 400;
     address public minter;
 
-    uint256 private totalSupply = 7;
-    address public sender;
+    constructor() {
+        minter = msg.sender;
+    }
+
+    mapping(address => uint256) public balances;
+
+    event Sent(address from, address to, uint256 amount);
 }

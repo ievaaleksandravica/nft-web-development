@@ -685,7 +685,6 @@
         <h2>Crash Course Solidity ||</h2> 
         <div class="content-title">
                 <div class="content-section">
-
                     <h3>Important note</h3>
                     <div class="content-details">
                         <p class="bold">Important Note</p>
@@ -696,33 +695,82 @@
                         </ul>
                     </div>
 
-                    <h3 class="empty">what is a Contructor in Solidity</h3>
+                    <h3>What is a contructor in Solidity</h3>
                     <div class="content-details">
-              
-                    </div>
-
-                    <h3 class="empty">What is mapping in Solidity</h3>
-                    <div class="content-details">
-                        <p class="bold"></p>
+                        <p class="bold">Function</p>
                         <ul>
-                            <li></li>
+                            <li>function is just a set of instructions bundled together</li>
+                        </ul>
+                        <p class="bold">Constructor</p>
+                        <ul>
+                            <li>constructor is a special type of function that gets called immediately upon deployment</li>
+                            <li><u>constructor() {}</u></li>
+                            <li>inside of the paranthesis we can add arguments</li>
+                            <li>the constuctor can only be called one time</li>
+                        </ul>
+                        <p class="bold">Constructor for our contract</p>
+                        <ul>
+                            <li>we want the <u>minter</u> address to be set immediately when we call the contract to the person calling the contract</li>
+                            <li>we can set the <u>minter</u> variable in the <u>constructor</u> to the current caller</li>
+                            <li><u>minter = msg.sender</u></li>
+                        </ul>
+                        <p class="bold">msg.sender</p>
+                        <ul>
+                            <li>global variable that is built in Solidity</li>
+                            <li>it allows us to set an address to the person calling the contract</li>
                         </ul>
                     </div>
 
-                    <h3 class="empty">Exercise - Write a Mapping</h3>
+                    <h3>What is mapping in Solidity</h3>
                     <div class="content-details">
-                        <p class="bold"></p>
+                        <p class="bold">Storing table data</p>
                         <ul>
-                            <li></li>
+                            <li>what if we want to store addresses and then give each address a specific number or index - we can use mapping</li>
+                            <li>the solution is mapping</li>
+                        </ul>
+                        <p class="bold">Mapping</p>
+                        <ul>
+                            <li>mapping acts like a dictionary to store data</li>
+                            <li>mapping takes a key which maps to value</li>
+                            <li><u>mapping(key => value) public mapName</u></li>
+                            
+                        </ul>
+
+                    </div>
+
+                    <h3>Exercise - write a mapping</h3>
+                    <div class="content-details">
+                        <p class="bold">Description</p>
+                        <ul>
+                            <li>write a map that takes the key of an address to a value of an integer called balances</li>
+                        </ul>
+                        <p class="bold">Solution</p>
+                        <ul>
+                            <li><u>mapping(address => uint256) public balances;</u></li>
                         </ul>
                     </div>
 
-
-                    <h3 class="empty">What are Events in Solidity</h3>
+                    <h3>What are events in Solidity</h3>
                     <div class="content-details">
-                        <p class="bold"></p>
+                        <p class="bold">Events</p>
                         <ul>
-                            <li></li>
+                            <li>events allow clients to react to specific contract changes that you declare (one way logging of transactions)</li>
+                            <li>events only work one way</li>
+                            <li>when you run contract transactions, events log the transaction information</li>
+                        </ul>
+                        <p class="bold">Types of events</p>
+                        <ul>
+                            <li>sent</li>
+                            <li>transfer</li>
+                            <li>allow</li>
+                        </ul>
+                        <p class="bold">Writing an event</p>
+                        <ul>
+                            <li>events take two steps: setting it up and emitting the event</li>
+                            <li>events come with preconditioned arguments we should pass</li>
+                            <li>arguments are inputs that allow our functions to be dynamic </li>
+                            <li><u>event Sent(from, to, amount)</u></li>
+                            <li><u>event Sent(address from, address to , uint256 amount)</u></li>
                         </ul>
                     </div>
 
