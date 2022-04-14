@@ -10,4 +10,6 @@ contract Token {
     constructor() {
         minter = msg.sender;
     }
+
+    mapping(address => uint256) public balances;
 }
