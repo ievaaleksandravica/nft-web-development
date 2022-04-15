@@ -17,6 +17,6 @@ contract Token {
     function mint(address receiver, uint256 amount) public {
         require(msg.sender == minter);
 
-        balances[receiver] = amount;
+        balances[receiver] += amount;
     }
 }
