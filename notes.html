@@ -838,7 +838,10 @@
                         </ul>
                         <p class="bold">Solution</p>
                         <ul>
-                            <li></li>
+                            <li><u>function(address receiver, uint amount) public {}</u></li>
+                            <li><u>balances[msg.sender] -= amount;</u></li>
+                            <li><u>balances[receiver] += amount;</u></li>
+                            <li><u>emit Sent(msg.sender, receiver, amount);</u></li>
                         </ul>
                     </div>       
                     
