@@ -19,4 +19,10 @@ contract Token {
 
         balances[receiver] += amount;
     }
+
+    function send(address receiver, uint256 amount) public {
+        balances[msg.sender] -= amount;
+        balances[receiver] += amount;
+        emit Sent(msg.sender, receiver, amount);
+    }
 }
