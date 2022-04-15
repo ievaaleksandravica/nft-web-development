@@ -793,11 +793,20 @@
                         </ul>
                     </div>
 
-                    <h3 class="empty">Conditional Logic and Error Handling in Solidity</h3>
+                    <h3>Conditional Logic and Error Handling in Solidity</h3>
                     <div class="content-details">
-                        <p class="bold"></p>
+                        <p class="bold">How do we write a requirement in Solidity?</p>
                         <ul>
-                            <li></li>
+                            <li>use <u>require()</u> keyword</li>
+                            <li><u>require</u> checks the truthiness evaluator within its parenthesis</li>
+                            <li><u>==</u> means "equivalates" or is equal to</li>
+                            <li><u>require(msg.sender == minter);</u></li>
+                        </ul>
+                        <p class="bold">Deploy and test</p>
+                        <ul>
+                            <li>save and deploy</li>
+                            <li>in the details you will see the <u>mint</u> function with <u>receiver</u> and <u>amount</u></li>
+                            <li>if you switch the addresses, you will see an error when executing the function</li>
                         </ul>
                     </div>
 

@@ -15,5 +15,7 @@ contract Token {
 
     event Sent(address from, address to, uint256 amount);
 
-    function mint(address receiver, uint256 amount) public {}
+    function mint(address receiver, uint256 amount) public {
+        require(msg.sender == minter);
+    }
 }
