@@ -6,16 +6,23 @@ pragma solidity ^0.8.4;
 contract Token {
     uint256 private tokens = 400;
     address public minter;
+    mapping(address => uint256) public balances;
 
     constructor() {
         minter = msg.sender;
     }
 
-    mapping(address => uint256) public balances;
-
     event Sent(address from, address to, uint256 amount);
 
     function mint(address receiver, uint256 amount) public {
         require(msg.sender == minter);
+
+        balances[receiver] += amount;
+    }
+
+    function send(address receiver, uint256 amount) public {
+        balances[msg.sender] -= amount;
+        balances[receiver] += amount;
+        emit Sent(msg.sender, receiver, amount);
     }
 }
