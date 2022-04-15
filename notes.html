@@ -810,9 +810,16 @@
                         </ul>
                     </div>
 
-                    <h3 class="empty">Updating Token Balances and the +=Operator</h3>
+                    <h3>Updating Token Balances and the +=Operator</h3>
                     <div class="content-details">
-                        <p class="bold"></p>
+                        <p class="bold">Send amounts to other receiver</p>
+                        <ul>
+                            <li>we can use the <u>mapping</u> here</li>
+                            <li><u>function</u> can access this map and add the information to it</li>
+                            <li><u>balances[receiver] = amount;</u> this sets the amount to a specific address</li>
+                            <li>problem: if an address already has 7 tokens and we mint again to the same address 3 more tokens, what will happen? - it will overwrite the amount</li>
+                        </ul>
+                        <p class="bold">Adding values</p>
                         <ul>
                             <li></li>
                         </ul>
