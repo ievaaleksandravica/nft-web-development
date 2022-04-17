@@ -5,4 +5,5 @@ contract learnVariables {
 
     uint256 chocolateBar = 10;
     uint256 storeOwner = 300;
+    bool lieDetector = true;
 }
