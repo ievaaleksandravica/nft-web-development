@@ -17,4 +17,8 @@ contract learnArrays {
     function getLength() public view returns (uint256) {
         return myArray.length;
     }
+
+    function remove(uint256 i) public {
+        delete myArray[i];
+    }
 }
