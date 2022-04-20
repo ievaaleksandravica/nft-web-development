@@ -4,4 +4,9 @@ contract learnArrays {
     uint256[] public myArray;
     uint256[] public myArray2;
     uint256[200] public myFixedSizedArray;
+
+    // push()
+    function push(uint256 number) public {
+        myArray.push(number);
+    }
 }
