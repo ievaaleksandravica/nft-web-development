@@ -9,4 +9,8 @@ contract learnArrays {
     function push(uint256 number) public {
         myArray.push(number);
     }
+
+    function pop() public {
+        myArray.pop();
+    }
 }
