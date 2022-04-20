@@ -12,13 +12,11 @@ contract decisionMaking {
         }
     }
 
-    function airDrop() public view nonpayable returns (uint256) {
+    function airDrop() public view returns (uint256) {
         if (stakingWallet == 10) {
-            stakingWallet = stakingWallet + 10;
-            return stakingWallet;
+            return stakingWallet + 10;
         } else {
-            stakingWallet = stakingWallet + 1;
-            return stakingWallet;
+            return stakingWallet + 1;
         }
     }
 }
