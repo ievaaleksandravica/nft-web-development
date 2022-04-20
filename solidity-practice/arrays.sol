@@ -15,6 +15,6 @@ contract learnArrays {
     }
 
     function getLength() public view returns (uint256) {
-        myArray.length;
+        return myArray.length;
     }
 }
