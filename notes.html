@@ -1035,19 +1035,22 @@
                 <div class="content-details">
                     <p class="bold">Remove elements from array using <i>delete</i></p>
                     <ul>
-                        <li>use <u>delete()</u></li>
                         <li><u>function remove(uint256 i) public {}</u></li>
                         <li><u>delete myArray[i];</u></li>
-                        <li></li>
+                        <li>when we run <u>delete</u>, we are not removing the attribute itself, just the value, that's why the length will stay the same</li>
                     </ul>
-                    <p class="bold"></p>
                 </div>
 
-                <h3 class="empty">Exercise - Maintain a compact array</h3>
+                <h3>Exercise - Maintain a compact array</h3>
                 <div class="content-details">
-                    <p class="bold"></p>
+                    <p class="bold">Description</p>
                     <ul>
-                        <li></li>
+                        <li>1. create an empty array called <u>changeArray</u></li>
+                        <li>2. create a function called <u>removeElement</u> which sets the index argument of the array to the last element in the array</li>
+                        <li>3. remove the last index from that function with the <u>pop</u> method</li>
+                        <li>4. create a function called <u>test</u> which pushed <u>1,2,3,4</u> in <u>changeArray</u></li>
+                        <li>5. remove the element <u>2</u> from the array when the contract is called</li>
+
                     </ul>
                 </div>
 
