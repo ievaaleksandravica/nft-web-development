@@ -6,6 +6,8 @@ contract decisionMaking {
     function validateOranges() public view returns (bool) {
         if (oranges == 5) {
             return true;
+        } else {
+            return false;
         }
     }
 }
