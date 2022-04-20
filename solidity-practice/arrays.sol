@@ -13,4 +13,8 @@ contract learnArrays {
     function pop() public {
         myArray.pop();
     }
+
+    function getLength() public view returns (uint256) {
+        myArray.length;
+    }
 }
