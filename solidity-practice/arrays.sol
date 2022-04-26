@@ -24,16 +24,17 @@ contract learnArrays {
     }
 
     function removeElement(uint256 i) public {
-        uint256 lastIndex = myArray.length - 1;
-        myArray[i] = myArray[lastIndex];
-        myArray[lastIndex] = myArray[i];
-        myArray.pop();
+        changeArray[i] = changeArray[changeArray.length - 1];
+        changeArray.pop();
     }
 
     function test() public {
-        changeArray.push(1);
-        changeArray.push(2);
-        changeArray.push(3);
-        changeArray.push(4);
+        for (uint256 i = 1; i <= 4; i++) {
+            changeArray.push(i);
+        }
+    }
+
+    function getChangeArray() public view returns (uint256[] memory) {
+        return changeArray;
     }
 }
